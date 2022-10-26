@@ -144,8 +144,8 @@
                                                 <tbody>
                                                     <tr>
                                                         <td style='width:230px;'>
-                                                        <a href='https://martheetmarie.com' target='_blank'>
-                                                                <img alt='LoGo Marthe Marie' height='80' src="{{asset('images/logo.png')}}" style='border:0;display:block;font-size:13px;height:80px;outline:none;text-decoration:none;width:100%;' width='230' />
+                                                        <a href='https://soutraitance.com' target='_blank'>
+                                                                <img alt='LoGo soutraitance' height='80' src="{{asset('images/logo.png')}}" style='border:0;display:block;font-size:13px;height:80px;outline:none;text-decoration:none;width:100%;' width='230' />
                                                             </a>
                                                         </td>
                                                     </tr>
@@ -186,7 +186,7 @@
                                                     <tr>
                                                         <td align='center' style='font-size:0px;padding:10px 0px;word-break:break-word;'>
                                                             <div style='color:#30373b;font-family:Open Sans, Arial, sans-serif;font-size:15px;font-weight:bold;line-height:18px;text-align:center;text-transform:uppercase;'>
-                                                                <a href='https://martheetmarie.com/' style='text-decoration:none; color:#30373b;' target='_blank'>
+                                                                <a href='https://soutraitance.com/' style='text-decoration:none; color:#30373b;' target='_blank'>
                                     Accueil
                                   </a>
                                                             </div>
@@ -210,7 +210,7 @@
                                                     <tr>
                                                         <td align='center' style='font-size:0px;padding:10px 0px;word-break:break-word;'>
                                                             <div style='color:#30373b;font-family:Open Sans, Arial, sans-serif;font-size:15px;font-weight:bold;line-height:18px;text-align:center;text-transform:uppercase;'>
-                                                                <a href='https://martheetmarie.com/produits' style='text-decoration:none; color:#30373b;' target='_blank'>
+                                                                <a href='https://soutraitance.com/produits' style='text-decoration:none; color:#30373b;' target='_blank'>
                                     Boutique
                                   </a>
                                                             </div>
@@ -238,7 +238,7 @@
                                                     <tr>
                                                         <td align='center' style='font-size:0px;padding:10px 0px;word-break:break-word;'>
                                                             <div style='color:#30373b;font-family:Open Sans, Arial, sans-serif;font-size:15px;font-weight:bold;line-height:18px;text-align:center;text-transform:uppercase;'>
-                                                                <a href='https://martheetmarie.com/contact' style='text-decoration:none; color:#30373b;' target='_blank'>
+                                                                <a href='https://soutraitance.com/contact' style='text-decoration:none; color:#30373b;' target='_blank'>
                                     nous contactez
                                   </a>
                                                             </div>
@@ -326,7 +326,7 @@
                                                             <table border='0' cellpadding='0' cellspacing='0' role='presentation' style='border-collapse:separate;line-height:100%;'>
                                                                 <tr>
                                                                     <td align='center' bgcolor='#EE008C' role='presentation' style='background-color:#EE008C;border:none;border-radius:5px;cursor:auto;padding:10px 25px;' valign='middle'>
-                                                                        <a href='https://martheetmarie.com/admin' style='background:#EE008C;color:#ffffff;font-family:Oxygen, Helvetica neue, sans-serif;font-size:14px;font-weight:400;line-height:21px;margin:0;text-decoration:none;text-transform:none;' target='_blank'>
+                                                                        <a href='https://soutraitance.com/admin' style='background:#EE008C;color:#ffffff;font-family:Oxygen, Helvetica neue, sans-serif;font-size:14px;font-weight:400;line-height:21px;margin:0;text-decoration:none;text-transform:none;' target='_blank'>
                                        SE CONNECTER AU DASHBORD
                                       </a>
                                                                     </td>
@@ -419,13 +419,13 @@
                                                                     <tr>
                                                                         <td align='center' style='font-size:0px;padding:5px;word-break:break-word;'>
                                                                             <div style='color:#848789;font-family:Open Sans, Arial, sans-serif;font-size:12px;line-height:18px;text-align:center;text-transform:uppercase;'>
-                                                                                <a href='https://martheetmarie.com/apropos' style='text-decoration:underline; color:#848789;' target='_blank'>
+                                                                                <a href='https://soutraitance.com/apropos' style='text-decoration:underline; color:#848789;' target='_blank'>
                                                                         Apropos de nous
 
                                 </a>&nbsp;&nbsp;|&nbsp;&nbsp; {{-- <a href='# Privacy' style='text-decoration:underline; color:#848789;' target='_blank'>
                                     Politique de confidentialité
                                   </a> &nbsp;&nbsp;|&nbsp;&nbsp; --}}
-                                                                                <a href='https://martheetmarie.com/conditions' style='text-decoration:underline; color:#848789;' target='_blank'>
+                                                                                <a href='https://soutraitance.com/conditions' style='text-decoration:underline; color:#848789;' target='_blank'>
                                                                           Condition générale d'utilisation
                                   </a> &nbsp;&nbsp;|&nbsp;&nbsp;
 
@@ -435,7 +435,7 @@
                                                                     <tr>
                                                                         <td align='center' style='font-size:0px;padding:5px;word-break:break-word;'>
                                                                             <div style='color:#848789;font-family:Open Sans, Arial, sans-serif;font-size:12px;line-height:18px;text-align:center;text-transform:uppercase;'>
-                                                                                Copyright © 2021 Marthe & Marie. Tout Droit Reservé.
+                                                                                Copyright © 2021 soutraitance. Tout Droit Reservé.
                                                                             </div>
                                                                         </td>
                                                                     </tr>

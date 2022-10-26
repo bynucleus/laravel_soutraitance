@@ -12,24 +12,24 @@ class SettingsTableSeeder extends Seeder
      */
     public function run()
     {
-        
+
 
         \DB::table('settings')->delete();
-        
+
         \DB::table('settings')->insert(array (
-            0 => 
+            0 =>
             array (
                 'id' => 1,
                 'key' => 'facebook_page',
                 'name' => 'page facebook',
                 'description' => 'lien de la page facebook',
-                'value' => 'https://m.facebook.com/martheetmarieci-119138899938134/',
+                'value' => 'https://m.facebook.com/soutraitanceci-119138899938134/',
                 'field' => '{"name":"value","label":"Value","type":"email"}',
                 'active' => 1,
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            1 => 
+            1 =>
             array (
                 'id' => 2,
                 'key' => 'twitter_page',
@@ -41,7 +41,7 @@ class SettingsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            2 => 
+            2 =>
             array (
                 'id' => 3,
                 'key' => 'instagram_page',
@@ -53,7 +53,7 @@ class SettingsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            3 => 
+            3 =>
             array (
                 'id' => 4,
                 'key' => 'contact_1',
@@ -65,7 +65,7 @@ class SettingsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            4 => 
+            4 =>
             array (
                 'id' => 5,
                 'key' => 'contact_2',
@@ -77,7 +77,7 @@ class SettingsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            5 => 
+            5 =>
             array (
                 'id' => 6,
                 'key' => 'email',
@@ -90,7 +90,7 @@ class SettingsTableSeeder extends Seeder
                 'updated_at' => NULL,
             ),
         ));
-        
-        
+
+
     }
 }

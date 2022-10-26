@@ -70,14 +70,14 @@ class RegisterController extends Controller
         if ($saved) {
             /* envoie du mail */
             $data = [
-                'subject' => 'Inscription sur martheetmarie.com',
+                'subject' => 'Inscription sur soutraitance.com',
                 'from' => 'virtus225one@gmail.com',
-                'from_name' => 'martheetmarie.com',
+                'from_name' => 'soutraitance.com',
                 'template' => 'mail.welcome',
                 'info' => [
                     'fullname' => $nom . ' ' . $prenom,
-                    'contenu' => 'vous venez de créer un compte sur www.martheetmarie.com , vous pouvez vous connectez dès maintenant avec vos identifiants .',
-                    'lien' => 'http://www.martheetmarie.com/',
+                    'contenu' => 'vous venez de créer un compte sur www.soutraitance.com , vous pouvez vous connectez dès maintenant avec vos identifiants .',
+                    'lien' => 'http://www.soutraitance.com/',
                     'nom_lien' => 'se connecter'
                 ]
             ];

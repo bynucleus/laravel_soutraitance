@@ -12,73 +12,44 @@ class ModelHasPermissionsTableSeeder extends Seeder
      */
     public function run()
     {
-        
+
 
         \DB::table('model_has_permissions')->delete();
-        
+
         \DB::table('model_has_permissions')->insert(array (
-            0 => 
+            0 =>
             array (
                 'permission_id' => 2,
                 'model_type' => 'App\\User',
                 'model_id' => 1,
             ),
-            1 => 
+            1 =>
             array (
                 'permission_id' => 2,
                 'model_type' => 'App\\User',
-                'model_id' => 4,
+                'model_id' => 3,
             ),
-            2 => 
+            2 =>
             array (
                 'permission_id' => 3,
                 'model_type' => 'App\\User',
                 'model_id' => 1,
             ),
-            3 => 
+            3 =>
             array (
                 'permission_id' => 3,
                 'model_type' => 'App\\User',
-                'model_id' => 4,
+                'model_id' => 3,
             ),
-            4 => 
-            array (
-                'permission_id' => 3,
-                'model_type' => 'App\\User',
-                'model_id' => 5,
-            ),
-            5 => 
+           
+            5 =>
             array (
                 'permission_id' => 4,
                 'model_type' => 'App\\User',
                 'model_id' => 1,
-            ),
-            6 => 
-            array (
-                'permission_id' => 4,
-                'model_type' => 'App\\User',
-                'model_id' => 4,
-            ),
-            7 => 
-            array (
-                'permission_id' => 5,
-                'model_type' => 'App\\User',
-                'model_id' => 1,
-            ),
-            8 => 
-            array (
-                'permission_id' => 5,
-                'model_type' => 'App\\User',
-                'model_id' => 4,
-            ),
-            9 => 
-            array (
-                'permission_id' => 5,
-                'model_type' => 'App\\User',
-                'model_id' => 5,
-            ),
+            )
         ));
-        
-        
+
+
     }
 }

@@ -49,9 +49,9 @@ public function  show_souscription()
     {
         // dd($request);
         $data = [
-            'subject' => "Nouvelle Demande d'abonnement sur martheetmarie.com",
-            'from' => 'martheetmarie.com@gmail.com',
-            'from_name' => 'martheetmarie.com',
+            'subject' => "Nouvelle Demande d'abonnement sur soutraitance.com",
+            'from' => 'soutraitance.com@gmail.com',
+            'from_name' => 'soutraitance.com',
             'template' => 'mail.souscriptionnew',
             'info' => [
                 'fullname' => $request->nom ,
@@ -59,14 +59,14 @@ public function  show_souscription()
                 'date' => now(),
                 'email_client' => $request->email,
                 'num_client' => $request->tel,
-                'lien' => 'http://www.martheetmarie.com/',
+                'lien' => 'http://www.soutraitance.com/',
                 'nom_lien' => 'se connecter'
             ]
         ];
-        $email_martheetmarie = \DB::table("settings")->where("name","email")->first()->value;
+        $email_soutraitance = \DB::table("settings")->where("name","email")->first()->value;
             $details['type_email'] = 'nouvelle souscription';
             // $details['email'] = "virtus225one@gmail.com";
-            $details['email'] = $email_martheetmarie;
+            $details['email'] = $email_soutraitance;
             $details['data'] = $data;
 
             dispatch(new \App\Jobs\SendEmailJob($details));
