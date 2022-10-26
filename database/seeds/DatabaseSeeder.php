@@ -20,5 +20,6 @@ class DatabaseSeeder extends Seeder
         $this->call(SettingsTableSeeder::class);
         $this->call(FailedJobsTableSeeder::class);
         $this->call(PasswordResetsTableSeeder::class);
+        $this->call(EntrepriseTableSeeder::class);
     }
 }

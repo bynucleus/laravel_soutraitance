@@ -16,9 +16,16 @@ class Consultant extends Migration
         Schema::create('consultant', function (Blueprint $table) {
             $table->increments('id');
             $table->String('nom');
+            $table->String('daten');
+            $table->String('contact');
+            $table->String('emailperso');
+            $table->String('emailProf');
             $table->String('poste');
-            $table->String('numero_cni');
-            $table->String('cv');
+            $table->String('paysd');
+            $table->String('typepiece');
+            $table->String('adresse');
+            $table->String('npiece');
+            // $table->String('cv');
             $table->timestamps();
 
         });

@@ -17,8 +17,9 @@ class Entreprise extends Migration
             $table->bigIncrements('id');
             $table->String('nom');
             $table->String('secteurActivite');
-            $table->String('localisation');
+            $table->String('localisation')->nullable();
             $table->String('adresse');
+            $table->integer('id_user');
 
             $table->timestamps();
 

@@ -28,7 +28,10 @@ class Entreprise extends Model
     | FUNCTIONS
     |--------------------------------------------------------------------------
     */
-
+    public function users()
+    {
+        return $this->belongsTo('App\Models\Users','id_user','id');
+    }
     /*
     |--------------------------------------------------------------------------
     | RELATIONS

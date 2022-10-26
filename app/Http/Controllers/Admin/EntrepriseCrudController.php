@@ -39,8 +39,18 @@ class EntrepriseCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::setFromDb(); // columns
-
+        // CRUD::setFromDb(); // columns
+        CRUD::addColumn(['name' => 'nom', 'type' => 'text', 'label'=>"Nom"]);
+        CRUD::addColumn(['name' => 'secteurActivite', 'type' => 'text', 'label'=>"Secteur d'activité"]);
+        CRUD::addColumn(['name' => 'adresse', 'type' => 'text', 'label'=>"Adresse"]);
+        $this->crud->addColumn([
+            'name' => 'id_user',
+            'type' => 'select2',
+            'label' => 'Admin attitré',
+            'entity' => 'users',
+            'attribute' => 'name',
+            'model' => 'App\Models\Users'
+        ]);
         /**
          * Columns can be defined using the fluent syntax or array syntax:
          * - CRUD::column('price')->type('number');
@@ -58,7 +68,19 @@ class EntrepriseCrudController extends CrudController
     {
         CRUD::setValidation(EntrepriseRequest::class);
 
-        CRUD::setFromDb(); // fields
+        // CRUD::setFromDb(); // fields
+        CRUD::addField(['name' => 'nom', 'type' => 'text', 'label'=>"Nom"]);
+        CRUD::addField(['name' => 'secteurActivite', 'type' => 'text', 'label'=>"Secteur d'activité"]);
+        CRUD::addField(['name' => 'adresse', 'type' => 'text', 'label'=>"Adresse du siège"]);
+        // CRUD::addField(['name' => 'id_user', 'type' => 'text', 'label'=>"Admin attitré"]);
+        $this->crud->addField([
+            'name' => 'id_user',
+            'type' => 'select2',
+            'label' => 'Admin attitré',
+            // 'entity' => 'produits',
+            'attribute' => 'name',
+            'model' => 'App\Models\Users'
+        ]);
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:
