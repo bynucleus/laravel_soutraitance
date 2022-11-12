@@ -28,10 +28,18 @@ class RolesTableSeeder extends Seeder
             1 => 
             array (
                 'id' => 2,
-                'name' => 'partenaire',
+                'name' => 'consultant',
                 'guard_name' => 'web',
                 'created_at' => '2020-11-14 03:34:37',
-                'updated_at' => '2020-11-14 03:34:37',
+                'updated_at' => '2022-10-30 09:07:24',
+            ),
+            2 => 
+            array (
+                'id' => 3,
+                'name' => 'entreprise cliente',
+                'guard_name' => 'web',
+                'created_at' => '2022-10-30 09:07:36',
+                'updated_at' => '2022-10-30 09:07:36',
             ),
         ));
         

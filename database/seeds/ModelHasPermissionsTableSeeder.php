@@ -12,44 +12,31 @@ class ModelHasPermissionsTableSeeder extends Seeder
      */
     public function run()
     {
-
+        
 
         \DB::table('model_has_permissions')->delete();
-
+        
         \DB::table('model_has_permissions')->insert(array (
-            0 =>
+            0 => 
             array (
                 'permission_id' => 2,
                 'model_type' => 'App\\User',
                 'model_id' => 1,
             ),
-            1 =>
-            array (
-                'permission_id' => 2,
-                'model_type' => 'App\\User',
-                'model_id' => 3,
-            ),
-            2 =>
+            1 => 
             array (
                 'permission_id' => 3,
                 'model_type' => 'App\\User',
                 'model_id' => 1,
             ),
-            3 =>
-            array (
-                'permission_id' => 3,
-                'model_type' => 'App\\User',
-                'model_id' => 3,
-            ),
-           
-            5 =>
+            2 => 
             array (
                 'permission_id' => 4,
                 'model_type' => 'App\\User',
                 'model_id' => 1,
-            )
+            ),
         ));
-
-
+        
+        
     }
 }

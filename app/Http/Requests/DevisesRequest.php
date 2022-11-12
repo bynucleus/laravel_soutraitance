@@ -2,10 +2,9 @@
 
 namespace App\Http\Requests;
 
-use App\Http\Requests\Request;
 use Illuminate\Foundation\Http\FormRequest;
 
-class ConsultantRequest extends FormRequest
+class DevisesRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,17 +25,7 @@ class ConsultantRequest extends FormRequest
     public function rules()
     {
         return [
-            'nom' => 'required',
-            'emailprof' => 'required',
-            'emailperso' => 'required',
-            'poste' => 'required',
-            'contact' => 'required',
-            'adresse' => 'required',
-            'paysd' => 'required',
-            'typepiece' => 'required',
-            'daten' => 'required',
-            'npiece' => 'required',
-
+            // 'name' => 'required|min:5|max:255'
         ];
     }
 

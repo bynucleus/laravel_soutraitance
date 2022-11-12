@@ -28,26 +28,26 @@ class PermissionsTableSeeder extends Seeder
             1 => 
             array (
                 'id' => 3,
-                'name' => 'paramètre de base',
+                'name' => 'configuration',
                 'guard_name' => 'web',
                 'created_at' => '2020-10-13 04:45:55',
-                'updated_at' => '2020-10-13 04:45:55',
+                'updated_at' => '2022-10-30 09:08:21',
             ),
             2 => 
             array (
                 'id' => 4,
-                'name' => 'Gestion des produits',
+                'name' => 'Gestion entreprise',
                 'guard_name' => 'web',
                 'created_at' => '2020-10-13 04:46:10',
-                'updated_at' => '2020-10-13 04:46:10',
+                'updated_at' => '2022-10-30 09:08:08',
             ),
             3 => 
             array (
                 'id' => 5,
-                'name' => 'production',
+                'name' => 'Gestion users',
                 'guard_name' => 'web',
                 'created_at' => '2020-10-13 04:46:29',
-                'updated_at' => '2020-10-13 04:46:29',
+                'updated_at' => '2022-10-30 09:08:50',
             ),
         ));
         

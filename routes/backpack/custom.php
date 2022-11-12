@@ -17,6 +17,11 @@ Route::group([
 
     Route::get('charts/weekly-users', 'Charts\WeeklyUsersChartController@response')->name('charts.weekly-users.index');
 
+    Route::get('/feuille_temps', 'ext\feuilleController@index')->name('commandes');
+    Route::get('/feuille_temps/{mission}/details', 'ext\feuilleController@show');
+    Route::get('/feuille_temps/{mission}/semaine', 'ext\feuilleController@semaine');
+    Route::post('/save-feuille-temps', 'ext\feuilleController@save_feuille')->name("save_feuille");
+
 
 
     // ------------------
@@ -30,4 +35,6 @@ Route::group([
     Route::crud('mission', 'MissionCrudController');
     Route::crud('facture', 'FactureCrudController');
     Route::crud('comptabilisation', 'ComptabilisationCrudController');
+    Route::crud('devises', 'DevisesCrudController');
+    Route::crud('caract-renum', 'CaractRenumCrudController');
 }); // this should be the absolute last line of this file

@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Route;
 |
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
+| contains the "web" middleware group. Now create something great!  
 |
 */
 
@@ -19,10 +19,10 @@ Route::get('/', function(){
 
 
 // route login et register
-Route::get('/register', 'RegisterController@index')->name('register.index');
-Route::post('/traitement-register', 'RegisterController@traitement')->name('register.traitement');
-Route::get('/login', 'LoginController@index')->name('login.index');
-Route::post('/traitement-login', 'LoginController@traitement')->name('login.traitement');
+// Route::get('/register', 'RegisterController@index')->name('register.index');
+// Route::post('/traitement-register', 'RegisterController@traitement')->name('register.traitement');
+// Route::get('/login', 'LoginController@index')->name('login.index');
+// Route::post('/traitement-login', 'LoginController@traitement')->name('login.traitement');
 
 
 

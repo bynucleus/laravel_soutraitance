@@ -42,7 +42,7 @@ class ConsultantCrudController extends CrudController
         // CRUD::setFromDb(); // columns'
         CRUD::addColumn(['name' => 'nom', 'type' => 'text','label'=>'Nom & Prenoms' ]);
         CRUD::addColumn(['name' => 'poste', 'type' => 'text','label'=>'Poste ' ]);
-        CRUD::addColumn(['name' => 'emailprof', 'type' => 'text','label'=>'EmailPro ' ]);
+        CRUD::addColumn(['name' => 'emailProf', 'type' => 'text','label'=>'EmailPro ' ]);
         CRUD::addColumn(['name' => 'contact', 'type' => 'text','label'=>'Contact ' ]);
         CRUD::addColumn(['name' => 'adresse', 'type' => 'text','label'=>'Adresse ' ]);
         // CRUD::addColumn(['name' => 'numero_cni', 'type' => 'text','label'=>'CNI' ]);
@@ -105,7 +105,15 @@ class ConsultantCrudController extends CrudController
         ],]);
         //
 
-        /**
+        $nom=request()->input('nom');
+        $email=request()->input('emailperso');
+        if($nom  and $email){
+            if(!$id=\DB::table('users')->where("email",$email)->first()){
+
+                $id=\DB::table('users')->insertGetId(['name'=>$nom,'email'=>$email,'password'=>bcrypt('pass123')]);
+                \DB::table('model_has_roles')->insert(['role_id'=>2,'model_type'=>"App\User",'model_id'=>$id]);
+            }
+            }    /**
          * Fields can be defined using the fluent syntax or array syntax:
          * - CRUD::field('price')->type('number');
          * - CRUD::addField(['name' => 'price', 'type' => 'number']));

@@ -19,7 +19,7 @@ class Entreprise extends Model
     // protected $primaryKey = 'id';
     // public $timestamps = false;
     protected $guarded = ['id'];
-    // protected $fillable = [];
+    protected $fillable = ['id','id_user','nom','secteurActivite','adresse'];
     // protected $hidden = [];
     // protected $dates = [];
 

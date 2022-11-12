@@ -29,6 +29,7 @@
             'description' => 'Consultant(s)',
             'progress' => 0,
         ]),
+        
          Widget::make([
             'type' => 'progress',
             'class'=> 'card border-0 text-white bg-info',

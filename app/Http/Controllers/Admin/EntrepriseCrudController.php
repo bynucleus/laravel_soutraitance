@@ -45,7 +45,7 @@ class EntrepriseCrudController extends CrudController
         CRUD::addColumn(['name' => 'adresse', 'type' => 'text', 'label'=>"Adresse"]);
         $this->crud->addColumn([
             'name' => 'id_user',
-            'type' => 'select2',
+            'type' => 'select',
             'label' => 'Admin attitré',
             'entity' => 'users',
             'attribute' => 'name',
@@ -79,7 +79,27 @@ class EntrepriseCrudController extends CrudController
             'label' => 'Admin attitré',
             // 'entity' => 'produits',
             'attribute' => 'name',
-            'model' => 'App\Models\Users'
+            'model' => 'App\Models\Users',
+            /*'options'   => (function ($query) {
+
+
+// dd(\DB::table('model_has_roles')->where("model_id","users.id")->first()->role_id==2);
+                    // return \DB::table('model_has_roles')->where("model_id",6)->first()->role_id==2?
+
+                    // >where('users.id','users.id')->get():$query->get();
+
+                    $query->where('id', function($query)
+                {
+                    // dd('users.id');
+                    $query->select(\DB::raw('*'))
+                          ->from('model_has_roles')
+                          ->whereRaw('model_has_roles.role_id = users.id');
+                })->get();
+            }),*/
+            // 'searchLogic'   => function ($query, $column, $searchTerm) {
+            //     $query->Where('email', 'like', '%'.$searchTerm.'%');
+            //     // $query->orWhere('text', 'like', '%'.$searchTerm.'%');
+            // },
         ]);
 
         /**

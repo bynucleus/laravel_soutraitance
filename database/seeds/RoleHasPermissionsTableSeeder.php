@@ -16,13 +16,6 @@ class RoleHasPermissionsTableSeeder extends Seeder
 
         \DB::table('role_has_permissions')->delete();
         
-        \DB::table('role_has_permissions')->insert(array (
-            0 => 
-            array (
-                'permission_id' => 2,
-                'role_id' => 2,
-            ),
-        ));
         
         
     }

@@ -6,9 +6,9 @@
             <main class="main mt-2">
               <nav aria-label="breadcrumb" class="d-none d-lg-block">
                 <ol class="breadcrumb bg-transparent justify-content-end p-0">
-                  <li class="breadcrumb-item text-capitalize">commande</li>
+                  <li class="breadcrumb-item text-capitalize">Feuille de Temp</li>
                   <li class="breadcrumb-item text-capitalize active" aria-current="page">
-                    <a href="/commandes">Liste des commandes</a></li>
+                    <a href="/commandes">Liste des Feuille de Temp</a></li>
                 </ol>
               </nav>
             </main>

@@ -21,5 +21,9 @@ class DatabaseSeeder extends Seeder
         $this->call(FailedJobsTableSeeder::class);
         $this->call(PasswordResetsTableSeeder::class);
         $this->call(EntrepriseTableSeeder::class);
+        $this->call(DevisesTableSeeder::class);
+        $this->call(CaractRenumTableSeeder::class);
+        $this->call(ConsultantTableSeeder::class);
+        $this->call(MissionTableSeeder::class);
     }
 }

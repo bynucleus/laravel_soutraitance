@@ -13,7 +13,7 @@ class Users extends Model
     protected $table = 'users';
     protected $primaryKey = 'id';
     // public $timestamps = false;
-    protected $fillable = ["id","name"];
+    protected $fillable = ["id","name","email"];
 
     protected $guarded = ['id'];
 }

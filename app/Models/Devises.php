@@ -5,7 +5,7 @@ namespace App\Models;
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
 
-class Consultant extends Model
+class Devises extends Model
 {
     use CrudTrait;
 
@@ -15,11 +15,11 @@ class Consultant extends Model
     |--------------------------------------------------------------------------
     */
 
-    protected $table = 'consultant';
+    protected $table = 'devises';
     // protected $primaryKey = 'id';
     // public $timestamps = false;
     protected $guarded = ['id'];
-    protected $fillable = ['npiece','nom','emailprof','daten','emailperso','poste','contact','adresse','paysd','typepiece'];
+    // protected $fillable = [];
     // protected $hidden = [];
     // protected $dates = [];
 
