@@ -30,7 +30,7 @@ class Mission extends Model
     */
     public function openFeuille($crud = false)
     {
-        return "<a class='btn btn-sm btn-link' target='_blank' href='feuille_temps/".$this->id."/semaine' data-toggle='tooltip' title='Renseigner la feuille de temps'><i class='la la-file'></i> Renseigner feuille de temps</a>";
+        return "<a class='btn btn-sm btn-link' href='feuille_temps/".$this->id."/semaine' data-toggle='tooltip' title='Renseigner la feuille de temps'><i class='la la-file'></i> Renseigner feuille de temps</a>";
     }
     public function entreprisescl()
     {

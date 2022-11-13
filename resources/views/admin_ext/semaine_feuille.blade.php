@@ -95,7 +95,10 @@
             <div class="card bg-white p-4">
                 <div class="row">
                     <div class="col-6 text-left">
-                        <h1 class="text-primary">FEUILLE DE TEMPS</h1>
+                        <h3 class="text-primary">FEUILLE DE TEMPS
+                            <small><a href="/admin/mission" class="d-print-none font-sm"><i class="la la-angle-double-left"></i> Retour à la liste des <span>missions</span></a></small>
+
+                        </h3>
                         {{-- <small class="text-black-50">Numero de la fiche #h </small> --}}
                     </div>
 
@@ -161,10 +164,11 @@
                             @foreach (array_keys($semaines) as $semaine)
                                 @php
                                     $ac = \DB::table('feuille_temps')
-                                        ->where('date_debut', $semaine)
+                                        ->where('date_debut', date('Y-m-d', strtotime($semaine)))
+                                        ->where('id_mission',$mission->id)
                                         ->first();
                                     // dd($ac==null);
-                                    $etat = $ac == null ? 'pas encore crée' : $ac->etat;
+                                    $etat = $ac == null ? 'non soumis' : $ac->etat;
                                 @endphp
                                 <tr>
                                     <td>du {{ $semaine }} au {{ $semaines[$semaine] }}</td>

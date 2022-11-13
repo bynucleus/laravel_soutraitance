@@ -25,5 +25,7 @@ class DatabaseSeeder extends Seeder
         $this->call(CaractRenumTableSeeder::class);
         $this->call(ConsultantTableSeeder::class);
         $this->call(MissionTableSeeder::class);
+        $this->call(EnregistrementTableSeeder::class);
+        $this->call(FeuilleTempsTableSeeder::class);
     }
 }

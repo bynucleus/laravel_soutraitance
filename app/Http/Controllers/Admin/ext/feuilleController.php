@@ -52,12 +52,14 @@ class feuilleController extends Controller
         $commande->update(['deleted_at' => now()]);
         return redirect()->route("commandes");
     }
+
     public function save_feuille(Request $request)
     {
 
         $debut = $request->debut;
         $fin = $request->fin;
         $id_mission = $request->id_mission;
+        $methode = $request->methode;
 
         $code_lundi1 = $request->code_lundi1;
         $hre_lundi1 = $request->hre_lundi1;
@@ -80,25 +82,65 @@ class feuilleController extends Controller
         $code_dimanche1 = $request->code_dimanche1;
         $hre_dimanche1 = $request->hre_dimanche1;
 
+
+        $liste_code1 = [
+            $code_lundi1, $code_mardi1, $code_mercredi1, $code_jeudi1, $code_vendredi1, $code_samedi1, $code_dimanche1
+        ];
+        $liste_hre1 = [
+            $hre_lundi1,
+            $hre_mardi1,
+            $hre_mercredi1,
+            $hre_jeudi1,
+            $hre_vendredi1,
+            $hre_samedi1,
+            $hre_dimanche1
+        ];
+        // dd($liste_hre1);
         $ac = \DB::table('feuille_temps')
-            ->where('date_debut', $debut)
+            ->where('date_debut', date('Y-m-d', strtotime($debut)))
+            ->where('id_mission', $id_mission)
             ->first();
-        // dd($ac==null);
-        if($ac == null){
-            $id=\DB::table('feuille_temps')
-            ->insertGetId([
-                "id_mission" => $id_mission,
-                "date_debut" => $debut,
-                "date_fin" => $fin,
-                "etat" => "enregistrer",
-                "created_at"=> now()
+        if ($ac == null) {
+            $id = \DB::table('feuille_temps')
+                ->insertGetId([
+                    "id_mission" => $id_mission,
+                    "date_debut" => date('Y-m-d', strtotime($debut)),
+                    "date_fin" => date('Y-m-d', strtotime($fin)),
+                    "etat" => $methode,
+                    "created_at" => now()
+                ]);
+
+
+            for ($i = 0; $i < 7; $i++) {
+                var_dump($liste_code1[$i]);
+                \DB::table('enregistrement')
+                    ->insert([
+                        "id_feuille_temps" => $id,
+                        "date" => date('Y-m-d', strtotime($debut . ' +' . $i . ' days')),
+                        "code_renumeration" => $liste_code1[$i],
+                        "nbre_heure" => $liste_hre1[$i] ?? 0,
+                        "created_at" => now()
+                    ]);
+            }
+        } else {
+            DB::table('feuille_temps')
+            ->where('date_debut', date('Y-m-d', strtotime($debut)))
+            ->where('id_mission', $id_mission)
+            ->update([
+                "etat"=>$methode,
             ]);
-            
+            for ($i = 0; $i < 7; $i++) {
             \DB::table('enregistrement')
-            ->insert([
-                "id_feuille_temps" => $id,
-            ]);
-            dd($request->input());
+            ->where('id_feuille_temps', $ac->id)
+            ->where("date",date('Y-m-d', strtotime($debut . ' +' . $i . ' days')))
+            ->update([
+                "code_renumeration" => $liste_code1[$i],
+                "nbre_heure" => $liste_hre1[$i] ?? 0,
+            ])
+            ;
         }
+    }
+    return redirect()->back();
+        // dd($request->input());
     }
 }
